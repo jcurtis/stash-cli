@@ -1,0 +1,11 @@
+{
+  "name": "stash-cli",
+  "version": "0.1.0",
+  "description": "Access Atlassian Stash info using the CLI",
+  "main": "index.js",
+  "author": "Jamie Curtis <jamocurtis@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "args": "^2.6.0"
+  }
+}
