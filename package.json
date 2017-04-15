@@ -6,7 +6,8 @@
   "author": "Jamie Curtis <jamocurtis@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "args": "^2.6.0"
+    "args": "^2.6.0",
+    "node-fetch": "^1.6.3"
   },
   "preferGlobal": true,
   "bin": {
