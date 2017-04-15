@@ -1,10 +1,19 @@
 const fetch = require('node-fetch')
+const chalk = require('chalk')
+const Conf = require('conf')
+const conf = new Conf()
+
+// TODO fix certificate issue
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
 
 function projects (name, sub, options) {
-  fetch(`${options.host}rest/api/1.0/projects`)
+  const host = options.host || conf.get('host')
+  fetch(`${host}rest/api/1.0/projects`)
     .then(res => res.json())
     .then(json => {
-      console.log(json)
+      json.values.forEach(project => {
+        console.log(`${project.name} - ${chalk.green(project.key)}`)
+      })
     })
     .catch(err => {
       console.log(err)
