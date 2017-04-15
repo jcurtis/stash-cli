@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// TODO fix certificate issue
+process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
+
 const args = require('args')
 
 args

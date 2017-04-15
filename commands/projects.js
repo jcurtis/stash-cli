@@ -3,9 +3,6 @@ const chalk = require('chalk')
 const Conf = require('conf')
 const conf = new Conf()
 
-// TODO fix certificate issue
-process.env['NODE_TLS_REJECT_UNAUTHORIZED'] = '0'
-
 function projects (name, sub, options) {
   const host = options.host || conf.get('host')
   fetch(`${host}rest/api/1.0/projects`)
